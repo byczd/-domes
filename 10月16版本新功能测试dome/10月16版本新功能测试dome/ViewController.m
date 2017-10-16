@@ -7,23 +7,36 @@
 //
 
 #import "ViewController.h"
+#import "AlertForFutouView.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    AlertForFutouView *_alertView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    
+
 }
 
+
+- (void)viewDidAppear:(BOOL)animated{
+    _alertView = [[AlertForFutouView alloc] init];
+    [_alertView show];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [_alertView show];
+}
 
 @end
