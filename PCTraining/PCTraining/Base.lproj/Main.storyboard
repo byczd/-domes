@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zKZ-lZ-aXj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jfm-uA-mrN">
+            <objects>
+                <navigationController id="zKZ-lZ-aXj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nph-qQ-Bk9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6kK-fK-9f4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQx-0n-WUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1065" y="87"/>
+        </scene>
+        <!--PC锻炼-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PCTraining" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Vl-yW-1mU"/>
+                        <viewControllerLayoutGuide type="bottom" id="QGQ-os-Nve"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gB-8c-6Vd">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.41530620386236872" blue="0.34626667917746801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Zjk-ak-DnU"/>
+                                    <constraint firstAttribute="width" secondItem="1gB-8c-6Vd" secondAttribute="height" multiplier="1:1" id="rvf-i1-2wI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqr-Nd-q69">
+                                <rect key="frame" x="137.5" y="126" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hOB-eH-zQE"/>
+                                    <constraint firstAttribute="width" constant="100" id="nrh-5l-esy"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="训练回合" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P55-7D-U9n">
+                                <rect key="frame" x="59" y="131" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="倒计时间：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-QJ-7u7">
+                                <rect key="frame" x="42" y="256" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-Wl-KRM">
+                                <rect key="frame" x="178" y="256" width="19" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jP-UK-8rs">
+                                <rect key="frame" x="157" y="567" width="62" height="30"/>
+                                <state key="normal" title="开始计时"/>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oto-gN-90y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39r-h5-ihw">
+                                <rect key="frame" x="328" y="318" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="录音"/>
+                                <connections>
+                                    <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2B-4q-a5S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7gB-Wl-KRM" firstAttribute="top" secondItem="jqr-Nd-q69" secondAttribute="bottom" constant="100" id="033-dz-RRl"/>
+                            <constraint firstItem="1gB-8c-6Vd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ZT-2o-P6d"/>
+                            <constraint firstItem="jqr-Nd-q69" firstAttribute="top" secondItem="0Vl-yW-1mU" secondAttribute="bottom" constant="62" id="4rQ-5H-MB6"/>
+                            <constraint firstItem="7gB-Wl-KRM" firstAttribute="centerY" secondItem="aiB-QJ-7u7" secondAttribute="centerY" id="6FB-zK-JSX"/>
+                            <constraint firstItem="QGQ-os-Nve" firstAttribute="top" secondItem="6jP-UK-8rs" secondAttribute="bottom" constant="70" id="6br-RF-Shs"/>
+                            <constraint firstItem="7gB-Wl-KRM" firstAttribute="centerX" secondItem="jqr-Nd-q69" secondAttribute="centerX" id="7cn-oN-P1R"/>
+                            <constraint firstItem="1gB-8c-6Vd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9p6-B9-R4Q"/>
+                            <constraint firstItem="jqr-Nd-q69" firstAttribute="centerY" secondItem="P55-7D-U9n" secondAttribute="centerY" id="EF5-bK-w8M"/>
+                            <constraint firstItem="aiB-QJ-7u7" firstAttribute="trailing" secondItem="P55-7D-U9n" secondAttribute="trailing" id="IAo-na-PHH"/>
+                            <constraint firstItem="1gB-8c-6Vd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RJs-w3-kXl"/>
+                            <constraint firstItem="6jP-UK-8rs" firstAttribute="centerX" secondItem="jqr-Nd-q69" secondAttribute="centerX" id="eZX-j3-V8B"/>
+                            <constraint firstItem="jqr-Nd-q69" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oep-Kr-6d4"/>
+                            <constraint firstItem="jqr-Nd-q69" firstAttribute="leading" secondItem="P55-7D-U9n" secondAttribute="trailing" constant="8.5" id="qcC-KG-kUx"/>
+                            <constraint firstItem="6jP-UK-8rs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yfp-pU-ZXo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PC锻炼" id="aDG-sl-cfF"/>
+                    <connections>
+                        <outlet property="StartBtn" destination="6jP-UK-8rs" id="lHG-n4-xva"/>
+                        <outlet property="_countLabel" destination="jqr-Nd-q69" id="clg-iO-ITD"/>
+                        <outlet property="_statueLabel" destination="1gB-8c-6Vd" id="HB8-nh-zWc"/>
+                        <outlet property="_timeLabel" destination="7gB-Wl-KRM" id="ZQ3-Jn-Ua2"/>
+                        <segue destination="Ab5-ad-MFS" kind="show" identifier="IdentiferRecordVoice" id="ZLe-yd-TV1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-337" y="87"/>
+        </scene>
+        <!--Record VoiceVC-->
+        <scene sceneID="IAD-cX-3Sf">
+            <objects>
+                <viewController id="Ab5-ad-MFS" customClass="RecordVoiceVC" customModule="PCTraining" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zf6-LG-DXA"/>
+                        <viewControllerLayoutGuide type="bottom" id="evU-pp-bN6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PsQ-3d-Z9b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8LR-Su-flf">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="BHd-4a-TfQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="efJ-5z-xgr">
+                                <rect key="frame" x="328" y="7" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="完成"/>
+                                <connections>
+                                    <action selector="finishAction:" destination="Ab5-ad-MFS" eventType="touchUpInside" id="eDQ-tv-5a1"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="_finnishBtn" destination="BHd-4a-TfQ" id="7Y7-bi-RoT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnD-n0-iw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="87"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,6 @@
+platform :ios, '9.0'
+target '有米测试Dome' do
+  use_frameworks!
+  pod 'OpenUDID'    
+end
+
