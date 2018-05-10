@@ -1,0 +1,6 @@
+framework module XGSDK {
+  umbrella header "XGSDK.h"
+
+  export *
+  module * { export * }
+}

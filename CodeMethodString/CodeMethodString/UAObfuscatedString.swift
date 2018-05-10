@@ -43,6 +43,15 @@ public extension String {
     }
 }
 
+func MD5ToStr(str:String) -> (String){
+    var returnStr = String()
+    let arr = str.components(separatedBy: ":")
+    for c in arr {
+        returnStr.append(c)
+    }
+    return returnStr
+}
+
 //方法名处理一
 func codeMethodStr(str:String) -> (String) {
     var returnStr = String()
