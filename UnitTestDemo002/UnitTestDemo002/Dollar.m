@@ -13,16 +13,6 @@
 
 
 
-+ (Dollar *)init:(CGFloat )number currency:(NSString *)currency{
-    Dollar *dollar = [super init:number];
-    dollar.currency = currency;
-    return dollar;
-}
-
-- (Money *)times:(CGFloat)mulNumber{
-    return [Money dollar:self.amount*mulNumber];
-}
-
 
 
 @end

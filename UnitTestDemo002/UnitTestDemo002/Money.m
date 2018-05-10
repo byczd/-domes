@@ -8,7 +8,6 @@
 
 #import "Money.h"
 #import "Dollar.h"
-#import "Franc.h"
 
 
 @implementation Money
@@ -26,9 +25,10 @@
     _amount = amount;
 }
 
-+ (instancetype)init:(CGFloat)number{
-    //return [[[self class] alloc] init];
-    return [[[self class] alloc] initWithNuember:number];;
++ (instancetype)init:(CGFloat)number currency:(NSString *)currency{
+    Money *money = [[[self class] alloc] initWithNuember:number];
+    money.currency = currency;
+    return money;
 }
 
 - (BOOL)equals:(id)objcet{
@@ -37,20 +37,23 @@
     Money *money = (Money *)objcet;
     
     //2.一般实现
-    return self.amount == money.amount && self.class == money.class;
+    //return self.amount == money.amount && self.class == money.class;
+    
+    //3.
+    return self.amount == money.amount && [self.currency isEqualToString:money.currency];
 }
 
-+ (Dollar *)dollar:(CGFloat)number{
-    return [Dollar init:number currency:@"USD"];
++ (Money *)dollar:(CGFloat)number{
+    return [Money init:number currency:@"USD"];
 }
 
-+ (Franc *)franc:(CGFloat)number{
-    return [Franc init:number currency:@"CHF"];
++ (Money *)franc:(CGFloat)number{
+    return [Money init:number currency:@"CHF"];
 }
 
 
 - (Money *)times:(CGFloat)mulNumber{
-    return [Money init:self.amount*mulNumber];
+    return [Money init:self.amount*mulNumber currency:self.currency];
 }
 
 

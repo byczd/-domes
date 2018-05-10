@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 @class Dollar;
-@class Franc;
+//@class Franc;
 
 
 @interface Money : NSObject
 
-+ (instancetype)init:(CGFloat)number;
++ (instancetype)init:(CGFloat)number currency:(NSString *)currency;
 
 - (instancetype)initWithNuember:(CGFloat)number;
 
@@ -23,8 +23,8 @@
 @property (nonatomic ,copy)NSString *currency;//货币
 
 
-+ (Dollar *)dollar:(CGFloat)number;
-+ (Franc *)franc:(CGFloat)number;
++ (Money *)dollar:(CGFloat)number;
++ (Money *)franc:(CGFloat)number;
 
 - (Money *)times:(CGFloat)mulNumber;
 

@@ -11,6 +11,6 @@
 
 @interface Franc : Money
 
-+ (Franc *)init:(CGFloat )number currency:(NSString *)currency;
+
 
 @end

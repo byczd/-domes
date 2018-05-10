@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "Money.h"
 #import "Dollar.h"
-#import "Franc.h"
+
 
 @interface MainTest : XCTestCase
 
@@ -35,7 +35,9 @@
 
 - (void)testMultiplication{
     Money *five = [Money dollar:5.f];
+    NSLog(@"five class: %@",[five class]);
     five = [five times:2];
+    NSLog(@"five class: %@",[five class]);
     XCTAssertEqual(five.amount, 10);
 }
 
@@ -55,11 +57,14 @@
 
 
 - (void)testFrancMultiplication{
-    Money *five = [Money init:5.f];
+    Money *five = [Money franc:5.f];
+    NSLog(@"five currency: %@",five.currency);
     Money *product = [five times:2];
+    NSLog(@"product currency: %@",five.currency);
     XCTAssertEqual(10, product.amount);
     product = [five times:3];
     XCTAssertEqual(15, product.amount);
+    
 }
 
 
@@ -77,14 +82,17 @@
     //工厂方法
     XCTAssertTrue([[Money dollar:5.f] equals:[Money dollar:5.f]]);
     XCTAssertFalse([[Money dollar:5.f] equals:[Money dollar:6.f]]);
-    XCTAssertTrue([[Money franc:5] equals:[Money franc:5]]);
-    XCTAssertFalse([[Money franc:5] equals:[Money franc:6.f]]);
-    XCTAssertFalse([[Money init:5] equals:[Money dollar:5]]);
+    XCTAssertFalse([[Money franc:5] equals:[Money dollar:5]]);
 }
 
 - (void)testCurrency{
     XCTAssertEqual(@"USD", [Money dollar:1].currency);
     XCTAssertEqual(@"CHF", [Money franc:1].currency);
+}
+
+
+- (void)testDifferentClassEquality{
+    XCTAssertTrue([[Money init:10 currency:@"CHF"] equals:[Money init:10 currency:@"CHF"]]);
 }
 
 - (void)testPerformanceExample {
@@ -97,7 +105,6 @@
         for (int i=0; i<100; i++) {
             sum += i;
         }*/
-         
     }];
 }
 

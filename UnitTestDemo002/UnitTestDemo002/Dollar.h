@@ -11,6 +11,5 @@
 
 @interface Dollar : Money
 
-+ (Dollar *)init:(CGFloat )number currency:(NSString *)currency;
 
 @end

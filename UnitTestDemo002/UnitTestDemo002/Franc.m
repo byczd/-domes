@@ -11,13 +11,4 @@
 @implementation Franc
 
 
-+ (Franc *)init:(CGFloat )number currency:(NSString *)currency{
-    Franc *franc = [super init:number];
-    franc.currency = currency;
-    return franc;
-}
-- (Money *)times:(CGFloat)mulNumber{
-    return [Money franc:self.amount*mulNumber];
-}
-
 @end
